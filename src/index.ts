@@ -271,7 +271,7 @@ program
 		"Agent type: builder | scout | reviewer | lead | merger",
 		"builder",
 	)
-	.option("--name <name>", "Unique agent name")
+	.option("--name <name>", "Unique agent name (auto-generated if omitted)")
 	.option("--spec <path>", "Path to task spec file")
 	.option("--files <list>", "Exclusive file scope (comma-separated)")
 	.option("--parent <agent>", "Parent agent for hierarchy tracking")
