@@ -145,6 +145,7 @@ program
 	.name("ov")
 	.description("Multi-agent orchestration for Claude Code")
 	.version(VERSION, "-v, --version", "Print version")
+	.enablePositionalOptions()
 	.option("-q, --quiet", "Suppress non-error output")
 	.option("--json", "JSON output")
 	.option("--verbose", "Verbose output")
@@ -298,6 +299,7 @@ specCmd
 	.argument("<task-id>", "Task ID for the spec file")
 	.option("--body <content>", "Spec content (or pipe via stdin)")
 	.option("--agent <name>", "Agent writing the spec (for attribution)")
+	.option("--json", "Output as JSON")
 	.action(async (taskId, opts) => {
 		await specWriteCommand(taskId, opts);
 	});
@@ -307,6 +309,7 @@ program
 	.description("Load context for orchestrator/agent")
 	.option("--agent <name>", "Prime for a specific agent")
 	.option("--compact", "Output reduced context (for PreCompact hook)")
+	.option("--json", "Output as JSON")
 	.action(async (opts) => {
 		await primeCommand(opts);
 	});

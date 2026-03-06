@@ -815,10 +815,17 @@ export function createLogCommand(): Command {
 		.option("--tool-name <name>", "Tool name (for tool-start/tool-end events, legacy)")
 		.option("--transcript <path>", "Path to Claude Code transcript JSONL (for session-end, legacy)")
 		.option("--stdin", "Read hook payload JSON from stdin (preferred)")
+		.option("--json", "Output as JSON")
 		.action(
 			async (
 				event: string,
-				opts: { agent?: string; toolName?: string; transcript?: string; stdin?: boolean },
+				opts: {
+					agent?: string;
+					toolName?: string;
+					transcript?: string;
+					stdin?: boolean;
+					json?: boolean;
+				},
 			) => {
 				if (!opts.agent) {
 					throw new ValidationError("--agent is required for log command", { field: "agent" });
