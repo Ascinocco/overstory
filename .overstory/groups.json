@@ -902,8 +902,20 @@
 			"overstory-1736",
 			"overstory-562e"
 		],
-		"status": "active",
+		"status": "completed",
 		"createdAt": "2026-03-11T22:51:30.506Z",
+		"completedAt": "2026-03-11T23:32:11.734Z"
+	},
+	{
+		"id": "group-8923fa2a",
+		"name": "phase-2-3-profiles",
+		"memberIssueIds": [
+			"overstory-45c5",
+			"overstory-2ad0",
+			"overstory-d831"
+		],
+		"status": "active",
+		"createdAt": "2026-03-11T23:47:45.777Z",
 		"completedAt": null
 	}
 ]
